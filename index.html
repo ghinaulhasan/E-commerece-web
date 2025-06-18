@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Ghina Ul Hassan - Premium Men's T-Shirts</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2B50EC;
+            --secondary: #6c757d;
+            --dark: #222;
+            --light: #f8f9fa;
+            --danger: #E74C3C;
+            --success: #27AE60;
+            --warning: #F39C12;
+            --sale: #E74C3C;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            color: var(--dark);
+            padding-top: 0 !important;
+        }
+
+        .announcement-bar {
+            background-color: var(--dark);
+            color: white;
+            font-size: 14px;
+            padding: 8px 0;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 10px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+            font-size: 24px;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            opacity: 0.7;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .product-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            cursor: pointer;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .badge-sale {
+            background-color: var(--sale);
+            color: white;
+        }
+
+        .badge-new {
+            background-color: var(--success);
+            color: white;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: var(--secondary);
+            font-size: 14px;
+        }
+
+        #productViewModal .modal-dialog {
+            max-width: 900px;
+        }
+
+        .product-view-img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .review-card {
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .rating {
+            color: var(--warning);
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+            font-size: 1.8rem;
+        }
+
+        .floating-whatsapp a {
+            color: white;
+        }
+
+        .payment-method-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+        }
+
+        .payment-method-img {
+            height: 30px;
+            object-fit: contain;
+            margin-bottom: 5px;
+        }
+
+        .payment-method-name {
+            font-size: 12px;
+            color: white;
+            text-align: center;
+        }
+
+        .payment-methods-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .modal-backdrop {
+            background-color: rgba(0,0,0,0.5) !important;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 50vh;
+            }
+
+            .product-img {
+                height: 180px;
+            }
+
+            .product-view-img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 40vh;
+            }
+            
+            .announcement-bar .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <p class="mb-0">🔥 SUMMER SALE! تمام مصنوعات پر 25% رعایت۔ کوڈ استعمال کریں: <strong>SUMMER25</strong></p>
+            <a href="https://wa.me/923313531509?text=Thank%20you%20for%20contacting%20Syed's%20Tees.%20How%20can%20we%20help%20you?"
+                class="text-white text-decoration-none" target="_blank">
+                <i class="fab fa-whatsapp"></i> 0331-3531509
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-tshirt me-2"></i>Syed's Tees
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#all-products">All T-Shirts</a></li>
+                            <li><a class="dropdown-item" href="#plain-tees">Plain Tees</a></li>
+                            <li><a class="dropdown-item" href="#printed-tees">Printed Tees</a></li>
+                            <li><a class="dropdown-item" href="#premium-collection">Premium Collection</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#new-arrivals">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sale">Summer Sale</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="#wishlist" class="btn btn-link text-dark me-2 position-relative">
+                        <i class="far fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            id="wishlist-count">0</span>
+                    </a>
+                    <a href="#cart" class="btn btn-link text-dark me-2 position-relative" data-bs-toggle="offcanvas">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+                            id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video -->
+    <section class="hero-section" id="home">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-man-wearing-t-shirt-and-jeans-43706-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-5 fw-bold mb-3">Syed Ghina Ul Hassan</h1>
+                    <p class="lead mb-4">Crafting premium quality t-shirts that blend comfort, style, and durability. Each piece is designed with meticulous attention to detail to elevate your everyday wardrobe.</p>
+                    <a href="#new-arrivals" class="btn btn-primary btn-lg px-4 me-2">Shop Now</a>
+                    <a href="#sale" class="btn btn-outline-light btn-lg px-4">Summer Sale</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Sections -->
+    <section id="all-products" class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="fw-bold">All T-Shirts</h2>
+                    <p class="text-muted">Browse our complete collection</p>
+                </div>
+            </div>
+            <div class="row" id="all-products-container">
+                <!-- All products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="plain-tees" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="fw-bold">Plain Tees</h2>
+                    <p class="text-muted">Simple yet stylish</p>
+                </div>
+            </div>
+            <div class="row" id="plain-products-container">
+                <!-- Plain tees will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="printed-tees" class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="fw-bold">Printed Tees</h2>
+                    <p class="text-muted">Make a statement</p>
+                </div>
+            </div>
+            <div class="row" id="printed-products-container">
+                <!-- Printed tees will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="premium-collection" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="fw-bold">Premium Collection</h2>
+                    <p class="text-muted">Exclusive designs by Syed Ghina Ul Hassan</p>
+                </div>
+            </div>
+            <div class="row" id="premium-products-container">
+                <!-- Premium products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section id="new-arrivals" class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="fw-bold">New Arrivals</h2>
+                    <p class="text-muted">Fresh designs added weekly</p>
+                </div>
+            </div>
+            <div class="row" id="new-products">
+                <!-- New arrival products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sale Section -->
+    <section id="sale" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="fw-bold">Summer Sale</h2>
+                    <p class="text-muted">Limited time offers</p>
+                </div>
+            </div>
+            <div class="row" id="sale-products">
+                <!-- Sale products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="fw-bold">Customer Reviews</h2>
+                    <p class="text-muted">What our customers say about Syed's Tees</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card review-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3"
+                                    width="60" alt="Customer">
+                                <div>
+                                    <h5 class="mb-0">Ahmed Khan</h5>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text">"Syed's Tees offers the most comfortable t-shirts I've ever worn. The
+                                quality is exceptional for the price. Highly recommended!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card review-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://randomuser.me/api/portraits/men/44.jpg" class="rounded-circle me-3"
+                                    width="60" alt="Customer">
+                                <div>
+                                    <h5 class="mb-0">Bilal Ahmed</h5>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text">"The summer collection from Syed Ghina Ul Hassan is amazing. The fabric
+                                is breathable and perfect for Pakistani weather."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card review-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle me-3"
+                                    width="60" alt="Customer">
+                                <div>
+                                    <h5 class="mb-0">Usman Ali</h5>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text">"Great customer service and fast delivery. The premium collection is
+                                worth every rupee. Will definitely order again!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product View Modal -->
+    <div class="modal fade" id="productViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="product-view-content">
+                    <!-- Product details will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="cartLabel">Your Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="cart-items">
+                <!-- Cart items will be loaded here -->
+                <p class="text-muted">Your cart is empty</p>
+            </div>
+            <div class="border-top pt-3 mt-3">
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">Rs 0</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <span>Shipping:</span>
+                    <span>Rs 150</span>
+                </div>
+                <div class="d-flex justify-content-between fw-bold">
+                    <span>Total:</span>
+                    <span id="cart-total">Rs 150</span>
+                </div>
+                <button class="btn btn-primary w-100 mt-3" id="checkout-btn">Checkout</button>
+                <button class="btn btn-outline-secondary w-100 mt-2" onclick="window.location.reload()">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Syed's Tees</h5>
+                    <p>Premium quality t-shirts with unique designs by Syed Ghina Ul Hassan that make you stand out.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/923313531509" class="text-white me-3" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Shop</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#all-products" class="text-white text-decoration-none">All
+                                Products</a></li>
+                        <li class="mb-2"><a href="#plain-tees" class="text-white text-decoration-none">Plain Tees</a>
+                        </li>
+                        <li class="mb-2"><a href="#printed-tees" class="text-white text-decoration-none">Printed
+                                Tees</a></li>
+                        <li class="mb-2"><a href="#premium-collection" class="text-white text-decoration-none">Premium
+                                Collection</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-user me-2"></i> Syed Ghina Ul Hassan</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Karachi, Pakistan</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +92 331 3531509</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> ghina@syedstees.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Payment Methods</h5>
+                    <div class="payment-methods-wrapper">
+                        <div class="payment-method-container">
+                            <span class="payment-method-name">JazzCash</span>
+                        </div>
+                        <div class="payment-method-container">
+                            <span class="payment-method-name">EasyPaisa</span>
+                        </div>
+                        <div class="payment-method-container">
+                            <span class="payment-method-name">UBL</span>
+                        </div>
+                        <div class="payment-method-container">
+                            <span class="payment-method-name">HBL</span>
+                        </div>
+                        <div class="payment-method-container">
+                            <span class="payment-method-name">Bank Alfalah</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2025 Design by Syed's Tees.Syed Ghina-ul-Hassan All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Pakistani T-Shirt Products
+            const products = [
+                {
+                    id: 1,
+                    name: "Premium Black Cotton Tee",
+                    price: 1499,
+                    originalPrice: 1999,
+                    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+                    description: "Our premium black t-shirt is made from 100% organic cotton for ultimate comfort. The fabric is pre-shrunk and features a tailored fit that's perfect for any occasion.",
+                    category: "premium",
+                    stock: "In stock",
+                    badge: "Sale",
+                    sizes: ["S", "M", "L", "XL"],
+                    colors: ["Black", "Charcoal", "Navy"],
+                    isNew: true
+                },
+                {
+                    id: 2,
+                    name: "Classic White Crew Neck",
+                    price: 1299,
+                    originalPrice: 1599,
+                    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+                    description: "The essential white t-shirt every man needs in his wardrobe. Made from breathable combed cotton with reinforced stitching for durability.",
+                    category: "plain",
+                    stock: "In stock",
+                    badge: "Sale",
+                    sizes: ["S", "M", "L", "XL"],
+                    colors: ["White", "Off-White"],
+                    isNew: true
+                },
+                {
+                    id: 3,
+                    name: "Urban Graphic Print Tee",
+                    price: 1799,
+                    originalPrice: 2299,
+                    image: "https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+                    description: "Make a statement with this bold graphic print t-shirt. Featuring vibrant colors that won't fade and a comfortable relaxed fit.",
+                    category: "printed",
+                    stock: "In stock",
+                    badge: "Sale",
+                    sizes: ["M", "L", "XL", "XXL"],
+                    colors: ["Black", "White", "Red"],
+                    isNew: false
+                },
+                {
+                    id: 4,
+                    name: "Striped Casual T-Shirt",
+                    price: 1399,
+                    originalPrice: 1799,
+                    image: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+                    description: "Perfect for casual outings, this striped t-shirt offers a stylish look with ultimate comfort. The breathable fabric keeps you cool all day.",
+                    category: "plain",
+                    stock: "In stock",
+                    sizes: ["S", "M", "L", "XL"],
+                    colors: ["Navy/White", "Black/White"],
+                    isNew: false
+                },
+                {
+                    id: 5,
+                    name: "V-Neck Comfort Tee",
+                    price: 1199,
+                    originalPrice: 1499,
+                    image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+                    description: "The perfect v-neck t-shirt with just the right depth. Made from soft, breathable fabric that drapes well and maintains its shape wash after wash.",
+                    category: "plain",
+                    stock: "In stock",
+                    badge: "Sale",
+                    sizes: ["S", "M", "L", "XL", "XXL"],
+                    colors: ["Black", "Gray", "Navy"],
+                    isNew: false
+                },
+                {
+                    id: 6,
+                    name: "Abstract Art Design Tee",
+                    price: 1699,
+                    originalPrice: 2099,
+                    image: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+                    description: "Stand out with this unique abstract art design. The print uses eco-friendly inks that are soft to the touch and won't crack or peel.",
+                    category: "printed",
+                    stock: "In stock",
+                    sizes: ["S", "M", "L", "XL"],
+                    colors: ["White", "Black", "Heather Gray"],
+                    isNew: true
+                },
+                {
+                    id: 7,
+                    name: "Premium Linen Tee",
+                    price: 1999,
+                    originalPrice: 2499,
+                    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+                    description: "Exclusive premium linen t-shirt from Syed Ghina Ul Hassan's signature collection. Perfect for summer with exceptional breathability.",
+                    category: "premium",
+                    stock: "In stock",
+                    badge: "New",
+                    sizes: ["M", "L", "XL"],
+                    colors: ["Beige", "White", "Light Blue"],
+                    isNew: true
+                },
+                {
+                    id: 8,
+                    name: "Cotton Polo Tee",
+                    price: 1599,
+                    originalPrice: 1999,
+                    image: "https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+                    description: "Classic polo t-shirt with premium cotton fabric. Perfect for both casual and semi-formal occasions.",
+                    category: "premium",
+                    stock: "In stock",
+                    sizes: ["S", "M", "L", "XL"],
+                    colors: ["Black", "Navy", "White"],
+                    isNew: false
+                }
+            ];
+
+            // Cart functionality
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Display all products
+            displayProducts(products, 'all-products-container');
+
+            // Display plain tees
+            displayProducts(products.filter(p => p.category === 'plain'), 'plain-products-container');
+
+            // Display printed tees
+            displayProducts(products.filter(p => p.category === 'printed'), 'printed-products-container');
+
+            // Display premium tees
+            displayProducts(products.filter(p => p.category === 'premium'), 'premium-products-container');
+
+            // Display new arrival products
+            displayProducts(products.filter(p => p.isNew), 'new-products');
+
+            // Display sale products
+            displayProducts(products.filter(p => p.price < p.originalPrice), 'sale-products');
+
+            function displayProducts(productsToDisplay, containerId) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+
+                container.innerHTML = '';
+
+                productsToDisplay.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'col-md-6 col-lg-4 col-xl-3 mb-4';
+
+                    const badge = product.badge ?
+                        `<div class="product-badge ${product.badge === 'Sale' ? 'badge-sale' : 'badge-new'}">${product.badge}</div>` :
+                        '';
+
+                    const originalPrice = product.originalPrice !== product.price ?
+                        `<span class="original-price">Rs ${product.originalPrice}</span>` :
+                        '';
+
+                    productCard.innerHTML = `
+                        <div class="card product-card h-100">
+                            ${badge}
+                            <img src="${product.image}" class="product-img w-100" alt="${product.name}" data-id="${product.id}">
+                            <div class="card-body">
+                                <h5 class="card-title">${product.name}</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <span class="price">Rs ${product.price}</span>
+                                        ${originalPrice}
+                                    </div>
+                                    <small class="text-success"><i class="fas fa-check-circle"></i> ${product.stock}</small>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-dark btn-sm flex-grow-1 view-product" data-id="${product.id}">
+                                        <i class="far fa-eye me-1"></i> View
+                                    </button>
+                                    <button class="btn btn-primary btn-sm flex-grow-1 add-to-cart" data-id="${product.id}">
+                                        <i class="fas fa-shopping-cart me-1"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    container.appendChild(productCard);
+                });
+
+                // Add event listeners to all "Add to cart" buttons
+                document.querySelectorAll('.add-to-cart').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const productId = parseInt(this.getAttribute('data-id'));
+                        addToCart(productId);
+                    });
+                });
+
+                // Add event listeners to all "View product" buttons
+                document.querySelectorAll('.view-product').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const productId = parseInt(this.getAttribute('data-id'));
+                        viewProduct(productId);
+                    });
+                });
+
+                // Add event listeners to product images
+                document.querySelectorAll('.product-img').forEach(img => {
+                    img.addEventListener('click', function () {
+                        const productId = parseInt(this.getAttribute('data-id'));
+                        viewProduct(productId);
+                    });
+                });
+            }
+
+            // View product details
+            function viewProduct(productId) {
+                const product = products.find(p => p.id === productId);
+                if (!product) return;
+
+                const modalContent = document.getElementById('product-view-content');
+                const sizeButtons = product.sizes.map(size =>
+                    `<button type="button" class="btn btn-outline-dark size-option">${size}</button>`
+                ).join('');
+
+                const colorOptions = product.colors.map(color =>
+                    `<option value="${color.toLowerCase()}">${color}</option>`
+                ).join('');
+
+                const originalPrice = product.originalPrice !== product.price ?
+                    `<span class="original-price">Rs ${product.originalPrice}</span>` :
+                    '';
+
+                const discount = product.originalPrice !== product.price ?
+                    `<span class="badge bg-danger ms-2">Save ${Math.round((1 - product.price / product.originalPrice) * 100)}%</span>` :
+                    '';
+
+                modalContent.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-6 mb-4 mb-md-0">
+                            <img src="${product.image}" class="product-view-img w-100" alt="${product.name}">
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="mb-3">${product.name}</h2>
+                            <div class="mb-3">
+                                <span class="price fs-4">Rs ${product.price}</span>
+                                ${originalPrice}
+                                ${discount}
+                            </div>
+                            <p class="mb-4">${product.description}</p>
+                            
+                            <div class="size-selector mb-4">
+                                <h6 class="mb-3">Size:</h6>
+                                <div class="d-flex flex-wrap">
+                                    ${sizeButtons}
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="product-color" class="form-label">Color:</label>
+                                <select class="form-select" id="product-color">
+                                    ${colorOptions}
+                                </select>
+                            </div>
+                            
+                            <div class="d-flex gap-3 mb-4">
+                                <div class="input-group w-25">
+                                    <button class="btn btn-outline-dark" type="button" id="decrease-qty">-</button>
+                                    <input type="text" class="form-control text-center" value="1" id="product-qty">
+                                    <button class="btn btn-outline-dark" type="button" id="increase-qty">+</button>
+                                </div>
+                                <button class="btn btn-primary flex-grow-1 add-to-cart" data-id="${product.id}">
+                                    <i class="fas fa-shopping-cart me-2"></i> Add to Cart
+                                </button>
+                            </div>
+                            
+                            <div class="pt-3 border-top">
+                                <h6 class="mb-3">Product Details:</h6>
+                                <ul class="list-unstyled small">
+                                    <li class="mb-1"><strong>Brand:</strong> Syed's Tees</li>
+                                    <li class="mb-1"><strong>Owner:</strong> Syed Ghina Ul Hassan</li>
+                                    <li class="mb-1"><strong>Material:</strong> 100% Premium Cotton</li>
+                                    <li class="mb-1"><strong>Fit:</strong> Regular Fit</li>
+                                    <li class="mb-1"><strong>Care:</strong> Machine wash cold, tumble dry low</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Initialize the modal
+                const productViewModal = new bootstrap.Modal(document.getElementById('productViewModal'));
+                productViewModal.show();
+
+                // Add event listener for quantity buttons
+                document.getElementById('increase-qty').addEventListener('click', function () {
+                    const qtyInput = document.getElementById('product-qty');
+                    qtyInput.value = parseInt(qtyInput.value) + 1;
+                });
+
+                document.getElementById('decrease-qty').addEventListener('click', function () {
+                    const qtyInput = document.getElementById('product-qty');
+                    if (parseInt(qtyInput.value) > 1) {
+                        qtyInput.value = parseInt(qtyInput.value) - 1;
+                    }
+                });
+
+                // Add event listener for size selection
+                document.querySelectorAll('.size-option').forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        document.querySelectorAll('.size-option').forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
+
+                // Add event listener for add to cart button in modal
+                document.querySelector('#product-view-content .add-to-cart').addEventListener('click', function () {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    const quantity = parseInt(document.getElementById('product-qty').value);
+                    addToCart(productId, quantity);
+                    const productViewModal = bootstrap.Modal.getInstance(document.getElementById('productViewModal'));
+                    productViewModal.hide();
+                });
+
+                // Close modal when clicking outside
+                document.getElementById('productViewModal').addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        const productViewModal = bootstrap.Modal.getInstance(this);
+                        productViewModal.hide();
+                    }
+                });
+            }
+
+            // Add to cart function with quantity
+            function addToCart(productId, quantity = 1) {
+                const product = products.find(p => p.id === productId);
+
+                if (!product) return;
+
+                const existingItem = cart.find(item => item.id === productId);
+
+                if (existingItem) {
+                    existingItem.quantity += quantity;
+                } else {
+                    cart.push({
+                        id: product.id,
+                        name: product.name,
+                        price: product.price,
+                        image: product.image,
+                        quantity: quantity
+                    });
+                }
+
+                updateCart();
+                showAlert(`${quantity} ${product.name} added to cart!`);
+            }
+
+            // Update cart UI
+            function updateCart() {
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                // Update cart count
+                const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+                document.getElementById('cart-count').textContent = cartCount;
+
+                // Update cart items in sidebar
+                const cartItemsContainer = document.getElementById('cart-items');
+                const cartSubtotal = document.getElementById('cart-subtotal');
+                const cartTotal = document.getElementById('cart-total');
+
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = '<p class="text-muted">Your cart is empty</p>';
+                    cartSubtotal.textContent = 'Rs 0';
+                    cartTotal.textContent = 'Rs 150';
+                    return;
+                }
+
+                let itemsHTML = '';
+                let subtotal = 0;
+
+                cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    subtotal += itemTotal;
+
+                    itemsHTML += `
+                        <div class="cart-item mb-3">
+                            <div class="d-flex">
+                                <img src="${item.image}" alt="${item.name}" width="60" height="60" class="rounded me-3">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">${item.name}</h6>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-muted">Rs ${item.price} x ${item.quantity}</small>
+                                        <strong>Rs ${itemTotal}</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mt-2">
+                                <button class="btn btn-sm btn-outline-secondary me-2 decrease-item" data-id="${item.id}">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger remove-item" data-id="${item.id}">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary ms-2 increase-item" data-id="${item.id}">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                cartItemsContainer.innerHTML = itemsHTML;
+                cartSubtotal.textContent = `Rs ${subtotal}`;
+                cartTotal.textContent = `Rs ${subtotal + 150}`;
+
+                // Add event listeners to cart item buttons
+                document.querySelectorAll('.remove-item').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const productId = parseInt(this.getAttribute('data-id'));
+                        removeFromCart(productId);
+                    });
+                });
+
+                document.querySelectorAll('.decrease-item').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const productId = parseInt(this.getAttribute('data-id'));
+                        decreaseQuantity(productId);
+                    });
+                });
+
+                document.querySelectorAll('.increase-item').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const productId = parseInt(this.getAttribute('data-id'));
+                        increaseQuantity(productId);
+                    });
+                });
+            }
+
+            // Remove from cart
+            function removeFromCart(productId) {
+                cart = cart.filter(item => item.id !== productId);
+                updateCart();
+                showAlert('Item removed from cart');
+            }
+
+            // Decrease quantity
+            function decreaseQuantity(productId) {
+                const item = cart.find(item => item.id === productId);
+
+                if (item && item.quantity > 1) {
+                    item.quantity -= 1;
+                    updateCart();
+                } else {
+                    removeFromCart(productId);
+                }
+            }
+
+            // Increase quantity
+            function increaseQuantity(productId) {
+                const item = cart.find(item => item.id === productId);
+
+                if (item) {
+                    item.quantity += 1;
+                    updateCart();
+                }
+            }
+
+            // Show alert
+            function showAlert(message) {
+                const alertPlaceholder = document.createElement('div');
+                alertPlaceholder.className = 'alert alert-success alert-dismissible fade show position-fixed top-0 end-0 m-3';
+                alertPlaceholder.style.zIndex = '1100';
+                alertPlaceholder.role = 'alert';
+                alertPlaceholder.innerHTML = `
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+
+                document.body.appendChild(alertPlaceholder);
+
+                setTimeout(() => {
+                    const bsAlert = new bootstrap.Alert(alertPlaceholder);
+                    bsAlert.close();
+                }, 3000);
+            }
+
+            // Checkout button functionality
+            document.getElementById('checkout-btn')?.addEventListener('click', function () {
+                if (cart.length === 0) {
+                    showAlert('Your cart is empty');
+                    return;
+                }
+
+                if (confirm('Your order has been placed successfully! Click OK to continue shopping.')) {
+                    cart = [];
+                    updateCart();
+                    window.location.reload();
+                }
+            });
+
+            // Initialize cart on page load
+            updateCart();
+
+            // Smooth scrolling for category links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Show floating WhatsApp button on scroll
+            window.addEventListener('scroll', function () {
+                const whatsappBtn = document.querySelector('.floating-whatsapp');
+                if (window.scrollY > 200) {
+                    whatsappBtn.style.display = 'block';
+                } else {
+                    whatsappBtn.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/923313531509?text=Thank%20you%20for%20contacting%20Syed's%20Tees.%20How%20can%20we%20help%20you?"
+            target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+</body>
+
+</html>
